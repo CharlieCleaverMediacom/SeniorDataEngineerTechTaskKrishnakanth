@@ -1,3 +1,6 @@
 # List all dependencies
-google-cloud-bigquery==x.x.x
-requests==x.x.x
+#google-cloud-bigquery==x.x.x
+requests==2.32.3
+logging
+psycopg2==2.9.10
+unittest

@@ -1,14 +1,14 @@
+from transform_data import *
+from load_to_databse import *
+
 # This is the main script where you will orchestrate the ETL process, feel free to completely modify the files/structure as you see fit.
 if __name__ == "__main__":
     print("ETL Job Started")
 
-    # Extract phase
-    # TODO: Implement data extraction logic
-
     # Transform phase
-    # TODO: Implement data transformation logic
+    combine_users_posts()
 
     # Load phase
-    # TODO: Implement data loading logic
+    load_to_table()
 
     print("ETL Job Finished")
