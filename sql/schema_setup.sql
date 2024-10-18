@@ -1,5 +1,5 @@
 -- Users table
-CREATE TABLE users (
+CREATE TABLE kk_users (
     id SERIAL PRIMARY KEY,
     user_id INTEGER NOT NULL,
     name VARCHAR(255),
@@ -10,7 +10,7 @@ CREATE TABLE users (
 );
 
 -- Addresses table
-CREATE TABLE addresses (
+CREATE TABLE kk_addresses (
     id SERIAL PRIMARY KEY,
     street VARCHAR(255),
     suite VARCHAR(100),
@@ -23,7 +23,7 @@ CREATE TABLE addresses (
 );
 
 -- Companies table
-CREATE TABLE companies (
+CREATE TABLE kk_companies (
     id SERIAL PRIMARY KEY,
     name VARCHAR(255),
     catchphrase VARCHAR(255),
@@ -33,7 +33,7 @@ CREATE TABLE companies (
 );
 
 -- Posts table
-CREATE TABLE posts (
+CREATE TABLE kk_posts (
     id SERIAL PRIMARY KEY,
     user_id INTEGER,
     title VARCHAR(255),

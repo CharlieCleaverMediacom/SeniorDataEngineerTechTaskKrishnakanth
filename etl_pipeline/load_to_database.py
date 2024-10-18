@@ -19,7 +19,7 @@ def load_to_table():
         # Insert user data into users table
         cur.execute(
             """
-            INSERT INTO users (user_id, name, username, email, phone, website)
+            INSERT INTO kk_users (user_id, name, username, email, phone, website)
             VALUES (%s, %s, %s, %s, %s, %s)
             RETURNING id;
             """,
@@ -31,7 +31,7 @@ def load_to_table():
         address = data['address']
         cur.execute(
             """
-            INSERT INTO addresses (street, suite, city, zipcode, geo_lat, geo_lng, user_id)
+            INSERT INTO kk_addresses (street, suite, city, zipcode, geo_lat, geo_lng, user_id)
             VALUES (%s, %s, %s, %s, %s, %s, %s);
             """,
             (address['street'], address['suite'], address['city'], address['zipcode'],
@@ -42,7 +42,7 @@ def load_to_table():
         company = data['company']
         cur.execute(
             """
-            INSERT INTO companies (name, catchphrase, bs, user_id)
+            INSERT INTO kk_companies (name, catchphrase, bs, user_id)
             VALUES (%s, %s, %s, %s);
             """,
             (company['name'], company['catchPhrase'], company['bs'], user_id)
@@ -51,7 +51,7 @@ def load_to_table():
         # Insert post data into posts table
         cur.execute(
             """
-            INSERT INTO posts (id, user_id, title, body, status, created_at)
+            INSERT INTO kk_posts (id, user_id, title, body, status, created_at)
             VALUES (%s, %s, %s, %s, %s, %s);
             """,
             (data['id'], user_id, data['title'], data['body'], data['status'],data['created_at'])
